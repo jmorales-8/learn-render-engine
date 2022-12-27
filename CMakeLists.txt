@@ -7,13 +7,13 @@ project ("renderingengine")
 
 # Add source files
 add_executable (renderingengine 
-    "src/graphics/vulkan/backend_vulkan.cpp"
-    "src/graphics/vulkan/backend_vulkan.hpp"
+    "src/graphics/vulkan/backend.cpp"
+    "src/graphics/vulkan/backend.hpp"
     "src/win64/main.cpp"
 )
 
 # C++20 and above only
-set_property(TARGET renderingengine PROPERTY CXX_STANDARD 20)
+set_property(TARGET renderingengine PROPERTY CXX_STANDARD 17)
 
 # Find and add Vulkan's lib and include files
 find_package(Vulkan REQUIRED)
