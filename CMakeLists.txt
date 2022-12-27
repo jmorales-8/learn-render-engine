@@ -12,8 +12,13 @@ add_executable (renderingengine
     "src/win64/main.cpp"
 )
 
-# C++20 and above only
+# C++ 17
 set_property(TARGET renderingengine PROPERTY CXX_STANDARD 17)
+
+# Visual Studio set project as startup
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} 
+	PROPERTY VS_STARTUP_PROJECT "renderingengine")
+
 
 # Find and add Vulkan's lib and include files
 find_package(Vulkan REQUIRED)
