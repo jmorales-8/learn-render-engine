@@ -82,9 +82,10 @@ int main()
 
     // Use validation layers if this is a debug build
     std::vector<const char*> layers;
-#if defined(_DEBUG)
-    layers.push_back("VK_LAYER_KHRONOS_validation");
-#endif
+
+    #if DEBUG
+        layers.push_back("VK_LAYER_KHRONOS_validation");
+    #endif
 
     // vk::ApplicationInfo allows the programmer to specifiy some basic information about the
     // program, which can be useful for layers and tools to provide more debug information.
