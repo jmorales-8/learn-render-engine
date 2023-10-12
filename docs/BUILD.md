@@ -1,2 +1,2 @@
 # How to build
-In this project I have included a CMake configuration. On windows this will produce a build.ninja that you can build with the VSCode launch.json that comes packaged if you'd so please. Although it is entirely possible to run this with any CMake backend you choose. The project originally uses Clang++, so the code adheres to the restrictions from Clang. 
+Use CMake with your favorite settings.

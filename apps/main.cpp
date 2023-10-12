@@ -23,6 +23,9 @@ Vulkan C++ Windowed Project Template
 Create and destroy a Vulkan surface on an SDL window.
 */
 
+#include "config.h"
+#include "version.h"
+
 // Enable the WSI extensions
 #if defined(__ANDROID__)
 #define VK_USE_PLATFORM_ANDROID_KHR
@@ -46,6 +49,13 @@ Create and destroy a Vulkan surface on an SDL window.
 
 int main()
 {
+    #if DEBUG
+    // Show startup message
+    std::cout << "Version: " << renderingengine_VERSION << '\n';
+    std::cout << "Git SHA1: " << renderingengine_GIT_SHA1 << '\n';
+    std::cout << "Git Date: " << renderingengine_GIT_DATE << '\n';
+    #endif
+
     // Create an SDL window that supports Vulkan rendering.
     if(SDL_Init(SDL_INIT_VIDEO) != 0) {
         std::cout << "Could not initialize SDL." << std::endl;

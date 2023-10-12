@@ -30,17 +30,17 @@ Do not rely on transitive inclusions. This allows people to remove no-longer-nee
 ### Namespaces
 Place code in namespaces. Do not use _using-directives_ i.e. `using namespace foo`. Avoid inline namespaces.
 
-### Structs vs. Classes 
+### Structs vs. Classes
 Use a `struct` only for passive objects that carry data; everything else is a `class`.
 
 ### Naming
 Prefer Pascal case when naming. Prefix class member variables with `m_`, constants with `c_`, and static variables with `s_`. Do not use prefixes on struct variables.
 
 ### Braces
-Prefer braces on new lines. 
+Prefer braces on new lines.
 ```cpp
 // Good!
-if (conditional) 
+if (conditional)
 {
     doWork();
 }
@@ -49,4 +49,3 @@ if (conditional)
 // Bad!
 if (conditional) { doWork(); }
 ```
-

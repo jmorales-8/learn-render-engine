@@ -1,0 +1,16 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+// Variables passed into CMake and populated
+#define renderingengine_VERSION_MAJOR @renderingengine_VERSION_MAJOR@
+#define renderingengine_VERSION_MINOR @renderingengine_VERSION_MINOR@
+#define renderingengine_VERSION_PATCH @renderingengine_VERSION_PATCH@
+#define renderingengine_VERSION_TWEAK @renderingengine_VERSION_TWEAK@
+#define __renderingengine_VERSION_STRINGIFY_A(a, b, c, d) __renderingengine_VERSION_STRINGIFY_B(a, b, c, d)
+#define __renderingengine_VERSION_STRINGIFY_B(a, b, c, d) #a "." #b "." #c "." #d
+#define renderingengine_VERSION __renderingengine_VERSION_STRINGIFY_A(renderingengine_VERSION_MAJOR, renderingengine_VERSION_MINOR, renderingengine_VERSION_TWEAK, renderingengine_VERSION_PATCH)
+
+#define renderingengine_GIT_SHA1 "@renderingengine_GIT_SHA1@"
+#define renderingengine_GIT_DATE "@renderingengine_GIT_DATE@"
+
+#endif // VERSION_H
